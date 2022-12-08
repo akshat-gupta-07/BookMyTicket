@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href=".\styles.css"/>
+    <link rel="icon" href=".\Resources\Icon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">BOOK MY TICKET</a>
+        <ul>
+            <li class="home"><a href="#">HOME</a></li>
+            <li class="service"><a href="#services_tab">SEVICES</a></li>
+            <li class="meal"><a href="#meal_tab">MEALS</a></li>
+            <li class="holiday"><a href="#holiday_header">HOLIDAY</a></li>
+            <li class="contact"><a href="#contact_header">CONTACT US</a></li>
+        </ul>
+    </header>
+    <div class="page_content">
+        <div id="home_tab">
+            <div id="book_ticket">
+                <div id="home_content">
+                    <h1>BOOK MY TRAIN</h1>
+                    <h3>RAILWAY RESERVATION SYSTEM</h3>
+                    <p style="color:lightgray">Choose the route,we will pave the way</p>
+                    <p style="padding:30px;color:whitesmoke;">Book Your Ticket Now!</p>
+                    <a href=".\ticket_booking.html" target="_blank">BOOK TICKETS</a>
+                </div>
+            </div>
+            <div id="home_tab_holiday">
+                <h3>HOLIDAY</h3>
+                <div id="holiday_pic_div">
+                    <img class="holiday_pic" src="https://assets.telegraphindia.com/telegraph/2021/Jun/1622578386_shutterstock_660512380.jpg">
+                    <img class="holiday_pic" src="https://static.toiimg.com/photo/msid-90660347,width-96,height-65.cms">
+                    <img class="holiday_pic" src="https://images.hdqwalls.com/wallpapers/eiffel-tower-paris-4k-wide.jpg">
+                    <img class="holiday_pic" src="https://www.visitdubai.com/-/media/images/leisure/homepage/dtcm-museum-of-the-future.jpg">
+                </div>
+            </div>
+            <div id="home_tab_about_us">
+                <h3>ABOUT US</h3>
+                <div id="home_tab_about_us_div">
+                    <div>
+                        <h4><strong>Welcome to Book My Ticket</strong></h4>
+                        <p>The world's most spectacular and memorable rail journeys can be found here.
+                            Here, you discover an easy approach to gather all the information you require in one convenient location.
+                            The better method for purchasing tickets is this one.<span id="less_text">...</span>
+                            <span id="more_text">A traveler can reserve a seat using the reservation 
+                                system before leaving. The facility's numerous windows and categories make it convenient
+                                for travelers. A traveler can select one of their preferred coaches from General, Sleeper,
+                                or AC coaches by providing a few details and making a small payment.
+                                All ticket types, including AC First Class, AC 2 Tier, AC 3 Tier, 
+                                AC Chair Car, Executive Chair Car, Sleeper, First Class, and Second 
+                                Seating, are available for reservation here.
+                            </span>
+                        </p>
+                        <button onclick="readMoreReadLess()" id="more_less_text">READ MORE</button>
+                    </div>
+                    <img class="about_us_pic" src="https://www.goodreturns.in/img/2018/03/indiantrain-1521720280.jpg">
+                </div>
+            </div>
+        </div>
+        <div id="services_tab">
+            <div id="services_header">
+            <h1>SERVICES</h1>
+            <h3>SERVING YOU IS OUR JOB</h3>
+            </div>
+            <div id="services_tab_div">
+                <div id="sub_div1">
+                    <div class="services_info_box">
+                        <div class="services_icon"><i class="fa-solid fa-ticket"></i></div>
+                        <div class="services_text">
+                            <h3>Book Ticket</h3>
+                            <p>
+                                Book Ticket form any<br>
+                                place at any time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services_info_box">
+                        <div class="services_icon"><i class="fa-solid fa-bowl-food"></i></div>
+                        <div class="services_text">
+                            <h3>E-Catering</h3>
+                            <p>
+                                Get restaurant food delivered<br>
+                                right at your seat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="sub_div2">
+                    <div class="services_info_box">
+                        <div class="services_icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <div class="services_text">
+                            <h3>Holiday</h3>
+                            <p>
+                                Make your plans for your next holidays
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services_info_box">
+                        <div class="services_icon"><i class="fa-sharp fa-solid fa-hotel"></i></div>
+                        <div class="services_text">
+                            <h3>Hotels</h3>
+                            <p>
+                                Book Hotels or Guest room<br>
+                                before reaching your destination.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="meal_tab">
+            <div id="meal_tab_header">
+                <h1>MEAL</h1>
+                <h3>GOOD FOOD WITHIN MINUTES</h3>
+            </div>
+            <div id="meal_tab_div">
+                <div class="meal_sub_div">
+                    <img src="https://en-media.thebetterindia.com/uploads/2022/08/294156779_1082267416022212_8006411537588067133_n-1_11zon-1660981126.jpg">
+                    <p class="meal_name">Chole Bhature<p>
+                    <p class="meal_cost">Rs.120/-</p>
+                    <p class="meal_contain">4 Bhature + 2 bowl of Chole</p>
+                </div>
+                <div class="meal_sub_div">
+                    <img src="https://www.brotherskitchen.in/wp-content/uploads/2021/03/burgerCombo-600x600.jpg">
+                    <p class="meal_name">Burger Combo<p>
+                    <p class="meal_cost">Rs.300/-</p>
+                    <p class="meal_contain">1 Veg Burger + 1 French Fries</p>
+                </div>
+                <div class="meal_sub_div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVcD21ueXj0uGAv-MP0PRArs0sIbhP6Oqsw&usqp=CAU">
+                    <p class="meal_name">Pepperoni Pizza<p>
+                    <p class="meal_cost">Rs.470/-</p>
+                    <p class="meal_contain">1 Large size Pizza</p>
+                </div>
+                <div class="meal_sub_div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfyi2bNB6kUB8p8eR0yCuR-KhNcgxpjlTyHg&usqp=CAU">
+                    <p class="meal_name">Pasta<p>
+                    <p class="meal_cost">Rs.300/-</p>
+                    <p class="meal_contain">1 Bowl of Red Sauces Pasta</p>
+                </div>
+            </div>
+        </div>
+        <div id="holiday_tab">
+            <div id="holiday_header">
+                <h1>HOLIDAY PACKAGES</h1> 
+                <h3>WE PLAN, YOUR PACK</h3>
+            </div>
+            <div id="holiday_tab_div">
+                <div class="holiday_sub_div">
+                    <p class="package_name">Tourist Train<p>
+                    <img src="https://www.majestictrainindia.com/images/Exterior/ex-1.jpg">
+                    <p class="package_cost">Rs.91,500/-</p>
+                    <p class="package_contain">Majestic Rajasthan</p>
+                </div>
+                <div class="holiday_sub_div">
+                    <p class="package_name">International Packages<p>
+                    <img src="https://i.gifer.com/fyCl.gif">
+                    <p class="package_cost">Rs.1,30,000/-</p>
+                    <p class="package_contain">Europe Rail Tours Packages</p>
+                </div>
+                <div class="holiday_sub_div">
+                    <p class="package_name">National Packages<p>
+                    <img src="https://i.makeagif.com/media/8-22-2017/X6QU6S.gif">
+                    <p class="package_cost">Rs.51,500/-</p>
+                    <p class="package_contain">Wondrous Andaman</p>
+                </div>  
+            </div>
+        </div>
+        <div id="contact_us_tab">
+            <div id="contact_header">
+                <h1>CONTACT US</h1> 
+                <h3>WE ARE HERE FOR YOU!</h3>
+            </div>
+            <div id="contact_content">
+                <div id="contact_info">
+                    <div class="contact_info_box">
+                        <div class="contact_icon"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                        <div class="contact_text">
+                            <h3>Address</h3>
+                            <p>
+                                <strong>Lovely Professional University</strong><br>
+                                Jalandhar-Delhi, G.T. Road,<br>
+                                Phagwara, Punjab (INDIA) -144411
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact_info_box">
+                        <div class="contact_icon"><i class="fa-sharp fa-solid fa-phone"></i></div>
+                        <div class="contact_text">
+                            <h3>Phone</h3>
+                            <p>
+                                900-901-2345
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact_info_box">
+                        <div class="contact_icon"><i class="fa-sharp fa-solid fa-envelope"></i></div>
+                        <div class="contact_text">
+                            <h3>Email</h3>
+                            <p>
+                                contactus.bookmyticket@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact_form">
+                    <form>
+                        <h2>Send us your message.</h2>
+                        <div class="contact_input_box">
+                            <input id="Username" type="text" required="required" name="" placeholder="Username">
+                        </div>
+                        <div class="contact_input_box">
+                            <input id="Email" type="email" required="required" name="" placeholder="Email">
+                        </div>
+                        <div class="contact_input_box">
+                            <textarea id="Message" required="required" placeholder="Type your message here.." cols="50" rows="5"></textarea>
+                        </div>
+                        <div class="contact_input_box">
+                            <input type="submit" required="required" name="" value="Send" onclick="sendMessage()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll",function()
+        {
+            let header = document.querySelector("header")
+            header.classList.toggle("sticky",window.scrollY >0);
+        })
+        function readMoreReadLess()
+        {
+            let lessText = document.getElementById("less_text");
+            let moreText = document.getElementById("more_text");
+            let moreLessBtn = document.getElementById("more_less_text");
+
+            if (lessText.style.display === "none") 
+            {
+                lessText.style.display = "inline";
+                moreLessBtn.innerHTML = "READ MORE";
+                moreText.style.display = "none";
+            } 
+            else 
+            {
+                lessText.style.display = "none";
+                moreLessBtn.innerHTML = "READ LESS";
+                moreText.style.display = "inline";
+            }
+        }
+        function sendMessage()
+        {
+            let uname=document.getElementById("Username").value;
+            let eId=document.getElementById("Email").value;
+            let sms=document.getElementById("Message").value;
+
+            if (!uname || !eId || !sms)
+            {
+                alert("Error!, Please enter all the credentials.");
+            }
+            else
+            {
+                alert("Thank you for getting in touch.");
+            }
+        }
+    </script>
+</body>
+</html>

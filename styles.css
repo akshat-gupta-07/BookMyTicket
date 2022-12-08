@@ -1,0 +1,486 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgb(245, 245, 245);
+}
+header
+{
+    font-family: 'Consolas';
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    padding: 30px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 20px 100px;
+}
+header .logo
+{
+    color: white;
+    position: relative;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    padding: 5px;
+    color: white;
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+header ul li a:visited
+{
+    padding-bottom: 5px;
+    color: white;
+}
+header ul li a:hover
+{
+    padding-bottom: 5px;
+    border-bottom: 3px solid cyan;
+    color: white;
+}
+header ul li a:active
+{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #4bed2f;
+    color: white;
+}
+header .logo:visited
+{
+    color: White;
+}
+header .logo:hover
+{
+    letter-spacing: 5px;
+    color: white;
+}
+.page_content
+{
+    font-family: 'Garamond';
+    margin-top: 80px;
+    transition: 0.6s;
+}
+#meal_tab,#services_tab,#team_tab,#contact_us_tab
+{
+    padding: 20px, 0, 20px, 0;
+}
+#home_tab #book_ticket
+{
+    position: relative;
+    background-image: url("Resources/Train.jpg");
+    width: 100%;
+    height: 86.85vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#home_content
+{
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 20px;
+}
+#home_content h1,h3
+{
+    padding: 5px;
+    letter-spacing: 2px;
+}
+#home_content h1
+{
+    font-weight: bold;
+    color: white;
+}
+#home_content a
+{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    border-radius: 25px;
+    letter-spacing: 1px;
+}
+#home_content a:hover
+{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+#contact_us_tab
+{
+    position: relative;
+    background-image: url("Resources/Train2.jpg");
+    width: 100%;
+    height: 91vh;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+}
+#contact_us_tab #contact_header
+{
+    text-align: center;
+}
+#contact_us_tab #contact_header h1
+{
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+#contact_us_tab #contact_content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    padding: 30px;
+}
+#contact_us_tab #contact_info
+{
+    display: flex;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#contact_us_tab #contact_info .contact_info_box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+#contact_us_tab #contact_info .contact_icon
+{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+}
+#contact_us_tab #contact_info .contact_text
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-left: 20px;
+    color: white;
+}
+#contact_us_tab #contact_info .contact_text h3
+{
+    font-size: 18px;
+}
+#contact_us_tab #contact_info
+{
+    margin-right: 50px;
+    border-right: 5px solid white;
+}
+#contact_form h2
+{
+    color: white;
+    font-size: 25px;
+}
+#contact_form .contact_input_box
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+#contact_form .contact_input_box input[type=text], 
+#contact_form .contact_input_box input[type=email],
+#contact_form .contact_input_box textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 3px solid cyan;
+    outline: none;
+    background-color: rgba(255, 254, 254, 0);
+    color: white;
+    resize: none;
+}
+#contact_form .contact_input_box input[type=submit]
+{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    background-color: rgba(255, 254, 254, 0);
+}
+#contact_form .contact_input_box input[type=text]:hover, 
+#contact_form .contact_input_box input[type=email]:hover,
+#contact_form .contact_input_box textarea:hover
+{
+    transition: .5s;
+    border-bottom: 3px solid #4bed2f;
+}
+#contact_form .contact_input_box input[type=submit]:hover
+{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+#home_tab_holiday
+{
+    padding: 30px;
+    text-align: center;
+}
+#home_tab_holiday #holiday_pic_div
+{
+    display: flex;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+#home_tab_holiday #holiday_pic_div .holiday_pic
+{
+    height: 150px;
+    width: 200px;
+}
+#home_tab_about_us h3
+{
+    text-align: center;
+    padding: 0 30px 30px 0;
+}
+#home_tab_about_us #home_tab_about_us_div
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+#more_text
+{
+    display: none;
+}
+#home_tab_about_us #home_tab_about_us_div div
+{
+    margin: 0 50px 0 50px;
+}
+#home_tab_about_us #home_tab_about_us_div img
+{
+    height: 30%;
+    width: 30%;   
+}
+#home_tab_holiday #holiday_pic_div .holiday_pic:hover
+{
+    transition: .75s;
+    transform: scale(1.1);
+}
+#home_tab_about_us #home_tab_about_us_div div h4
+{
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+#home_tab_about_us #home_tab_about_us_div div p
+{
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+#home_tab_about_us #home_tab_about_us_div div button
+{
+    padding: 5px;
+    margin: 20px 0;
+    border: 1px solid black;
+    background-color: rgb(245, 245, 245);
+}
+#services_tab #services_header
+{
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 30px;
+    margin: 30px 0;
+}
+#services_tab_div
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+#services_tab_div #sub_div1, #services_tab_div #sub_div2
+{
+    display: flex;
+    flex-direction: column;
+}
+#services_tab_div #sub_div1 .services_info_box, #services_tab_div #sub_div2 .services_info_box
+{
+    display: flex;
+    padding-bottom: 50px;
+}
+#services_tab_div .services_info_box .services_icon
+{
+    min-width: 65px;
+    height: 65px;
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: 2px double black;
+    margin-right: 20px;
+    color: rgb(68, 153, 196);
+    
+    
+}
+#services_tab_div .services_info_box .services_icon:hover
+{
+    transition: 1s;
+    background-color: rgb(194, 192, 192);
+}
+#meal_tab #meal_tab_div
+{
+    background-color: rgb(76, 148, 241);
+    justify-content: space-around;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+#meal_tab
+{
+    margin-bottom: 50px;
+}
+#meal_tab #meal_tab_header
+{
+    margin-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2;
+}
+#meal_tab #meal_tab_div .meal_sub_div
+{
+    background-color: white;
+    padding: 20px;
+    max-width: 150px;
+    border-radius: 25px;
+}
+#meal_tab #meal_tab_div img
+{
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+#meal_tab #meal_tab_div .meal_name
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+#meal_tab #meal_tab_div .meal_cost
+{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 119, 0);
+}
+#meal_tab #meal_tab_div .meal_sub_div:hover
+{
+    transform: scale(1.1);
+}
+#holiday_tab
+{
+    margin-bottom: 70px;
+}
+#holiday_tab #holiday_header
+{
+    margin-top: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2;
+}
+#holiday_tab_div
+{
+    background-color: rgb(221, 132, 36);
+    justify-content: space-around;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+#holiday_tab #holiday_tab_div .holiday_sub_div
+{
+    background-color: white;
+    padding: 20px;
+    max-width: 250px;
+    height: 300px;
+    border-radius: 25px;
+}
+#holiday_tab #holiday_tab_div img
+{
+    height: 150px;
+    width: 200px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+#holiday_tab #holiday_tab_div .package_name
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#holiday_tab #holiday_tab_div .package_cost
+{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 119, 0);
+}
+#holiday_tab #holiday_tab_div .holiday_sub_div:hover
+{
+    transform: scale(1.1);
+}

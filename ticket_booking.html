@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="icon" href=".\Resources\Icon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        #book_train_header
+        {
+            text-align: center;
+            padding: 0 50px 30px 0;
+            letter-spacing: 2;
+        }
+        #book_train_content
+        {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            width: 80%;
+        }
+        #book_train_content h4,h1,h3
+        {
+            color: white;
+        }
+        #book_train_content h4
+        {
+            padding: 5px 0;
+        }
+        #book_train_content input[type=date]
+        {
+            color-scheme: dark;
+        }
+        #book_train_content select, #book_train_content input[type=date]
+        {
+            text-align: center;
+            padding: 7px 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid white;
+            outline: none;
+            color: white;
+        }
+        
+        #book_train_content input[type=submit]
+        {
+            margin-top: 20px;
+            padding: 5px 0 ;
+        }
+        #main
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            width: 50%;
+            margin-top: 10px;
+            margin-left: 25%;
+            margin-right: 50px;
+            border-radius: 25px;
+        }
+        form
+        {
+            background-image: url(https://wallpapercave.com/wp/FPfe3Eu.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-size: 100% 100%;
+            padding: 7%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="main">
+            <div id="book_train_header">
+                <h1>TICKET BOOKING<h1>
+                <h3>BOOK YOUR TICKET HERE..</h3>
+            </div>
+            <div id="book_train_content">
+                <h4>From</h4>
+                <select name="starting_destination" id="start" required>
+                    <option value="none" selected>--Select--</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Vadodara">Vadodara</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bharuch">Bharuch</option>
+                </select>
+                <h4>To</h4>
+                <select name="ending_destination" id="end">
+                    <option value="none" selected>--Select--</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Vadodara">Vadodara</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bharuch">Bharuch</option>
+                </select>
+                <h4>Date of journey</h4>
+                <input id="date_of_journey" type="date" name="date_of_travelling">
+                <h4>Class</h4>
+                <select name="train_class" id="train_class" required>
+                    <option value="none" selected>--Select--</option>
+                    <option value="EC">Executive Chair Class (EC)</option>
+                    <option value="AC1">Air Conditioned First-Tier (1AC)</option>
+                    <option value="AC2">Air Conditioned Two-Tier (2AC)</option>
+                    <option value="AC3">Air Conditioned Three-Tier (3AC)</option>
+                    <option value="FC">First Class (FC)</option>
+                    <option value="CC">AC Chair Class (CC)</option>
+                    <option value="SL">Sleeper Class (SL)</option>
+                    <option value="2S">Second Class (2S)</option>
+                </select>
+                <input type="submit" name="book_tain" value="BOOK TRAIN" onclick="ticket()">
+            </div>
+        </div>
+    </form>
+    <script>
+        function ticket()
+        {
+            let starting=document.getElementById("start").value;
+            let ending=document.getElementById("end").value;
+            let dateJourney=document.getElementById("date_of_journey").value;
+            let trainClass=document.getElementById("train_class").value;
+
+            if (starting==ending && starting!="none")
+            {
+                alert("Error!, Starting place and Destination place cannot be same.");
+            }
+            else if (starting=="none" || ending=="none")
+            {
+                alert("Error!, Please select the location.");
+            }
+            else if (!dateJourney)
+            {
+                alert("Error!, Please enter date of the journey.");
+            }
+            else if (trainClass=="none")
+            {
+                alert("Error!, Please select train class.");
+            }
+            else
+            {
+                alert("Congratulations!, Your ticket form: "+starting+" to: "+ending+" has been booked.");
+                alert("Thank You for choosing BOOK MY TICKET, Have a save and wonderfull journey.")
+            }
+        }
+    </script>
+</body>
+</html>
